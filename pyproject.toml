@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ses-emailer"
+version = "0.1.0"
+description = "Tiny Amazon SES SMTP helper with CC/BCC, attachments, and HTML support."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+keywords = ["ses", "email", "smtp", "aws", "mailer"]
+
+dependencies = []  # stdlib only
+
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Communications :: Email",
+]
+
+[project.urls]
+Homepage = "https://github.com/<YOUR_GH_USERNAME>/ses_emailer"
+Repository = "https://github.com/<YOUR_GH_USERNAME>/ses_emailer"
+
+[tool.hatch.build.targets.wheel]
+packages = [{ include = "ses_emailer", from = "src" }]
