@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling>=1.25"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "ses-emailer"
@@ -9,10 +9,9 @@ description = "Tiny Amazon SES SMTP helper with CC/BCC, attachments, and HTML su
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
-authors = [{ name = "Your Name" }]
+authors = [{ name = "Vairavan K" }]
 keywords = ["ses", "email", "smtp", "aws", "mailer"]
-
-dependencies = []  # stdlib only
+dependencies = []
 
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -25,8 +24,11 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/<YOUR_GH_USERNAME>/ses_emailer"
-Repository = "https://github.com/<YOUR_GH_USERNAME>/ses_emailer"
+Homepage = "https://github.com/VairavanK/ses_wrapper"
+Repository = "https://github.com/VairavanK/ses_wrapper"
 
-[tool.hatch.build.targets.wheel]
-packages = [{ include = "ses_emailer", from = "src" }]
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
